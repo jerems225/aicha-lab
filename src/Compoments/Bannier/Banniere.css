@@ -10,6 +10,7 @@
     display: flex;
     
 }
+
 .container-image{
    border: 3px solid white; 
    width: 200px;
@@ -18,7 +19,11 @@
    border-radius: 50%;
  transition: transform 0.2s;
 }
-
+.container-image:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+ }
+ 
 .container-images{
     border: 3px solid white; 
     width: 200px;
@@ -26,11 +31,11 @@
     margin: 5px;
   transition: transform 0.2s;
  }
+ .container-images:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 
-.container-image:hover{
-   cursor: pointer;
-   transform: scale(1.1);
- }
 #image{
    height: 100%;
    width: 100%;

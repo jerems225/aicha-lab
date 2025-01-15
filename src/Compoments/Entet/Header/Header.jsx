@@ -3,6 +3,7 @@ import "./Header.css";
 import Categorie from "../../Categorie/Categorie";
 import Baniere from "../../Bannier/Baniere";
 import Foother from "../Foother/Foother";
+import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div>
@@ -21,10 +22,11 @@ export default function Header() {
       <a href="#">About</a>
       <a href="#"><Categorie/></a>
       <a href="#">Conectez vous</a>
+      <Link to="/MovieListe">
+      Visitez des dessins annimés
+      </Link>
       </div>
     </header>
-    <Baniere/>
-    <Foother/>
     </div>
   );
 }

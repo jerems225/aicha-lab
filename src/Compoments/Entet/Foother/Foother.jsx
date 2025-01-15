@@ -1,6 +1,5 @@
 import React from 'react';
 import './Foother.css';
-
 const Foother = () => {
   return (
     <footer className="footer">
