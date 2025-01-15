@@ -1,0 +1,42 @@
+.container-image-ronde{
+    display: flex;
+    margin-top: 50px;
+    
+}
+
+.container-image-rectangle{
+    border: 2px solid blue;
+    margin-top: 50px;
+    display: flex;
+    
+}
+.container-image{
+   border: 3px solid white; 
+   width: 200px;
+   height: 200px;
+   margin: 5px;
+   border-radius: 50%;
+ transition: transform 0.2s;
+}
+
+.container-images{
+    border: 3px solid white; 
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+  transition: transform 0.2s;
+ }
+
+.container-image:hover{
+   cursor: pointer;
+   transform: scale(1.1);
+ }
+#image{
+   height: 100%;
+   width: 100%;
+   border-radius: 100%; 
+}
+#images{
+    height: 100%;
+    width: 100%;
+ }
