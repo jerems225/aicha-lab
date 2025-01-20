@@ -6,7 +6,12 @@
     border: 2px solid blue;
     display: flex;
     margin-left: 200px;
-    width: 600px;
+    width: 50em;
+}
+.conecter{
+    border: 2px solid black;
+    display: flex;
+    color: red;
 }
 .logo{
     height: 100px;
@@ -24,9 +29,11 @@ a{
     margin: 10px;
     color: black;
     font-size: 20px;
+    margin-top: 20px;
 }
 
 select{
-    font-size: 20px;
+    font-size: 25px;
     margin-left: 10px;
+    color: red;
 }

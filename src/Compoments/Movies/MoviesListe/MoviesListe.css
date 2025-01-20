@@ -9,3 +9,6 @@ input{
 input:hover{
     border: 2px solid green;
 }
+.card{
+    float: left;
+}

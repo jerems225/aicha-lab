@@ -1,9 +1,12 @@
 import React from 'react'
+import './Categorie.css'
 const Categorie =()=> {
  
     return (
     <>
-      <div>Categorie
+      
+      <div className='categorie'>
+      <strong>categorie</strong>
       <select name="annimé" id="">
         <option value="">Comédie</option>
         <option value="">Aventure </option>
@@ -14,6 +17,7 @@ const Categorie =()=> {
         
       </select>
       </div>
+      
       
       </>
     )

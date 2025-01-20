@@ -19,8 +19,8 @@ export default function Header() {
       </div>
 
       <div className="info">
-      <a href="#">About</a>
       <a href="#"><Categorie/></a>
+      <a href="#">About</a>
       <a href="#">Conectez vous</a>
       <Link to="/MovieListe">
       Visitez des dessins annimés

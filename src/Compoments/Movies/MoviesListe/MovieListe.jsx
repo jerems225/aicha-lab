@@ -5,7 +5,7 @@ import "./MoviesListe.css"
 import Movie from "../Movie/Movie";
 import MovieData from "../../../Data/Data-movies";
 import Header from "../../Entet/Header/Header";
-const MovieListe = () => {
+const MovieList = () => {
   const [sheatem, setSheatem] = useState("");
   const handleChange = (e) => {
     let value = e.target.value;
@@ -20,13 +20,13 @@ const MovieListe = () => {
         <input
           type="text"
           placeholder="recherche"
-         
+          onChange={handleChange} 
           id="input" 
           required
           
         />
         <button>
-        <FaSearch style={{ fontSize: "20px", color: "blue" }} onChange={handleChange} />
+        <FaSearch style={{ fontSize: "20px", color: "blue" }} />
         </button>
       </div>
 
@@ -39,8 +39,8 @@ const MovieListe = () => {
           })
           .map((element) => {
             return (
-              <div>
-                <Link to="/MoviesListComponent">
+              <div className="card">
+                <Link to={`/MoviesListClip/${element.id}`}>
                   <Movie cards={element} />
                 </Link>
               </div>
@@ -52,4 +52,4 @@ const MovieListe = () => {
   );
 };
 
-export default MovieListe;
+export default MovieList;

@@ -1,7 +1,7 @@
 import react from "react";
 import './Movie.css';
 const Movie=({cards})=>{
-    const {image}=cards
+    const {id,titre,age,image}=cards
     return(
       <div>
         <div className="cards-movies"> 
