@@ -7,7 +7,7 @@ const Accueil=()=>  {
   
     return (
       <div>
-        <Header/>
+       <Header/>
         <Baniere/>
         <Foother/>
       </div>

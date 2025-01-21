@@ -9,22 +9,24 @@ export default function Header() {
     <div>
     <header className="header">
       <div className="logo">
-        <a href="/">
+        <Link to="/">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv7iDwZU3oruUMuohBvY-nD6Xuy37-_MunTg&s"
             alt=""
             id="logo-image"
           />
-        </a>
+        </Link>
       </div>
 
       <div className="info">
-      <a href="#"><Categorie/></a>
-      <a href="#">About</a>
-      <a href="#">Conectez vous</a>
+      <Categorie/>
+      <div className="liens">
+      <Link to="/About">About</Link>
+      <Link>Conectez vous</Link>
       <Link to="/MovieListe">
       Visitez des dessins annimés
       </Link>
+      </div>
       </div>
     </header>
     </div>

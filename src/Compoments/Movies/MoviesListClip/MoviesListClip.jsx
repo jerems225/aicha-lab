@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './MoviesListClip.css';
-import Header from '../../Entet/Header/Header';
 import MoviesClip from '../MoviesClip/MoviesClip';
 import DataMoviesClip from '../../../Data/DataClipMovies';
 function MoviesListClip () {
@@ -11,7 +10,7 @@ function MoviesListClip () {
   })
     return (
       <>
-      <Header/>
+      
       <div className='container-movies'>
         <div className='postUrl'>  
               <MoviesClip movie={movies}/>
