@@ -1,41 +1,60 @@
-.header{
-    border: 4px solid  black;
+/* Style global du header */
+.header {
     display: flex;
-}
-.info{
-    border: 2px solid blue;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Logo textuel F-Anim */
+  .logo-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .logo-text .anim {
+    color: #f39c12; /* Couleur dorée pour "Anim" */
+  }
+  
+  .logo-text:hover {
+    color: #f39c12;
+  }
+  
+  /* Navigation */
+  .nav-links {
     display: flex;
-    margin-left: 200px;
-    width: 50em;
-   justify-content: space-around;
-}
-.liens{
-    border: 2px solid black;
-    display: flex;
-    width: 300px;
-    padding: 10px 20px;
-    justify-content: space-around;
-    text-align: center;
-}
-.conecter{
-    border: 2px solid black;
-    display: flex;
-    color: red;
-}
-.logo{
-    height: 100px;
-    width: 100px;
-   
-}
-#logo-image{
+    gap: 25px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f39c12;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
     
-    height: 100%;
-    width: 100%;
-   
-}
-
-select{
-    font-size: 20px;
-    margin-left: 10px;
-    color: red;
-}
+    .nav-links {
+      margin-top: 10px;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

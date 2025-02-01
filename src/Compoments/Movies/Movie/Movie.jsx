@@ -1,15 +1,21 @@
-import react from "react";
+import { Link } from 'react-router-dom';
 import './Movie.css';
-const Movie=({cards})=>{
-    const {id,titre,age,image}=cards
+const Movie=({movie})=>{
     return(
-      <div>
-        <div className="cards-movies"> 
-          <div className="image-movies">
-            <img src={image} alt="" id="image-movie"/>
+      <section className="recent-movies">
+      <div className="movies-grid">
+          <div lassName="movie-card">
+            <div className="movie-image-container">
+              <img src={movie.image} alt={movie.titre} className="movie-image" />
+            </div>
+            <div className="movie-content">
+              <h3 className="movie-title">{movie.titre}</h3>
+              <p className="movie-description">{movie.description}</p>
+            </div>
           </div>
-        </div>
-        </div>
+      </div>            
+      <Link to={`/movie/${movie.id}`}><button className="discover-more">Regarder Maintenant</button></Link>
+    </section>
     )
 }
 

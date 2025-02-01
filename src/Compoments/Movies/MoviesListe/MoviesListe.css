@@ -1,14 +1,64 @@
-.recherche{
-    border: 2px solid blue;
-    text-align: center;
-}
-input{
-    font-size: 30px;
-    margin: 20px;
-}
-input:hover{
-    border: 2px solid green;
-}
-.card{
-    float: left;
-}
+/* Conteneur principal */
+.movies-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Barre de recherche */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid #f39c12;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .search-bar button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .search-bar button:hover {
+    background: #e67e22;
+  }
+  
+  /* Grille des films */
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Style des cartes (même que RecentMovies) */
+  .movie-card {
+    background: #222;
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+
+  
+  /* Liens */
+  .movie-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+  

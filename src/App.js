@@ -1,12 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Accueil from './Pages/Accueils/Accueil';
 import MovieList from './Compoments/Movies/MoviesListe/MovieListe';
-import Movie from './Compoments/Movies/Movie/Movie';
-import MoviesListClip from './Compoments/Movies/MoviesListClip/MoviesListClip';
-import Header from './Compoments/Entet/Header/Header';
 import About from './Pages/About/About';
+import MoviePlayer from './Compoments/Movies/Movie/MoviePlayer/MoviePlayer';
 
 function App() {
   return (
@@ -14,7 +11,7 @@ function App() {
       <Routes>
         <Route path='/' element= { <Accueil/>}></Route>
         <Route path='/MovieListe' element={<MovieList/>}></Route>
-        <Route path='/MoviesListClip/:id' element={< MoviesListClip/>}></Route>
+        <Route path="/movie/:movieId" element={<MoviePlayer />} />
         <Route path='/About' element={<About/>}></Route>
       </Routes>
      

@@ -1,53 +1,44 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { FaSearch } from "react-icons/fa"; //L'importation de l'icon de recherche
-import "./MoviesListe.css"
+import React, { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import "./MoviesListe.css";
 import Movie from "../Movie/Movie";
 import MovieData from "../../../Data/Data-movies";
 import Header from "../../Entet/Header/Header";
+
 const MovieList = () => {
-  const [sheatem, setSheatem] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+
   const handleChange = (e) => {
-    let value = e.target.value;
-    setSheatem(value);
+    setSearchTerm(e.target.value);
   };
+
   return (
     <div>
-        <Header/>
-        <div className="recherche">
-      <div className="message-Listcards">
+      <Header />
+      <div className="movies-container">
+        {/* Barre de Recherche */}
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Rechercher un dessin animé..."
+            onChange={handleChange}
+          />
+          <button>
+            <FaSearch />
+          </button>
+        </div>
 
-        <input
-          type="text"
-          placeholder="recherche"
-          onChange={handleChange} 
-          id="input" 
-          required
-          
-        />
-        <button>
-        <FaSearch style={{ fontSize: "20px", color: "blue" }} />
-        </button>
+        {/* Liste des Films */}
+        <div className="movies-grid">
+          {MovieData.filter((movie) =>
+            movie.titre.toLowerCase().includes(searchTerm.toLowerCase())
+          ).map((movie) => (
+            <div className="movie-card" key={movie.id}>
+                <Movie movie={movie} />
+            </div>
+          ))}
+        </div>
       </div>
-
-      <div>
-        {MovieData
-          .filter((value) => {
-            return value.titre
-              .toLocaleLowerCase()
-              .includes(sheatem.toLocaleLowerCase());
-          })
-          .map((element) => {
-            return (
-              <div className="card">
-                <Link to={`/MoviesListClip/${element.id}`}>
-                  <Movie cards={element} />
-                </Link>
-              </div>
-            );
-          })}
-      </div>
-    </div>
     </div>
   );
 };

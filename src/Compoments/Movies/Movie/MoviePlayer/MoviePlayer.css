@@ -1,0 +1,71 @@
+/* Container du lecteur vidéo */
+.movie-player {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Pleine hauteur de l'écran */
+    background: rgba(0, 0, 0, 0.6);  /* Fond semi-transparent */
+  }
+  
+  /* Container du cadre de la vidéo */
+  .movie-player-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;  /* Largeur maximale */
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;  /* Coins arrondis */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);  /* Ombre portée */
+    background-color: #000;  /* Fond noir pour la vidéo */
+    transition: transform 0.3s ease-in-out;  /* Animation de zoom au survol */
+  }
+  
+  /* Animation de zoom pour l'iframe */
+  .movie-player-container:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Iframe de la vidéo */
+  .movie-player-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+  
+  /* Superposition du titre et autres éléments sur la vidéo */
+  .movie-player-overlay {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre portée sur le texte */
+    text-align: center;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  /* Responsivité : ajustement pour les petits écrans */
+  @media (max-width: 768px) {
+    .movie-player-container {
+      width: 90%;
+    }
+  
+    .movie-player-overlay {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movie-player-overlay {
+      font-size: 1.2rem;
+    }
+  }
+  
